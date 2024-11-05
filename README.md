@@ -1,2 +1,2 @@
 # Projeto-SIEM
-Projeto de fazer uma SIEM(Security Information and Event Management) utilizando VMs 
+Construção de um SIEM(Security Information and Event Management) utilizando VMs.
