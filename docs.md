@@ -14,4 +14,30 @@ Algumas das principais funcionalidades do VirtualBox:
 - **Modo de rede variável**: Oferece diversas opções para configurar a rede, como NAT, bridge e host-only, permitindo controlar como a VM se conecta à rede externa e interage com o hospedeiro.
 - **Snapshots**: Permite criar "fotos" do estado atual da máquina virtual para facilitar a recuperação em caso de erros.
 
-A melhor maneira de instalar o VirtualBox é através do site: [clique aqui](https://www.virtualbox.org/wiki/Downloads)
+A melhor maneira de instalar o VirtualBox é através do site oficial [aqui](https://www.virtualbox.org/wiki/Downloads)
+
+Aqui você deve escolher o download que pertence ao seu SO principal.
+
+![virtualboxscreenshot](/screenshots/virtualbox.png)
+
+Feita a instalação, execute o arquivo de setup do VirtualBox.
+
+### Kali Linux
+O Kali Linux é uma distribuição Linux voltada para segurança da informação, conhecida por sua ampla coleção de ferramentas para testes de penetração, análise forense digital, e pesquisa em segurança cibernética.
+Ele é baseado no Debian e foi desenvolvido pela Offensive Security, uma organização conhecida na área de segurança.
+
+Características Principais do Kali Linux:
+- Conjunto de ferramentas: O Kali Linux vem com mais de 600 ferramentas pré-instaladas voltadas para atividades como:
+    - Testes de penetração (ex: Nmap, Metasploit).
+    - Engenharia reversa.
+    - Análise forense.
+    - Segurança de rede.
+- Facilidade de uso para profissionais de segurança: Ele é projetado para ser uma plataforma fácil de configurar e usar para profissionais de segurança e entusiastas, fornecendo um ambiente otimizado para essas atividades.
+- Atualizações constantes: A equipe da Offensive Security mantém o Kali Linux sempre atualizado com as ferramentas e as correções de segurança mais recentes.
+
+O Kali Linux é de suma importância para o projeto porque permite a realização de testes de penetração e segurança de rede para estimular a geração de logs que será abordada mais a frente.
+
+Para a instalação, acesse o site oficial do Kali Linux [aqui](https://www.kali.org/get-kali/#kali-platforms)
+
+Escolha o download do Kali para o VirtualBox conforme a arquitetura
+
