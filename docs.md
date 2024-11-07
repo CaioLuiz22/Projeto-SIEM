@@ -39,5 +39,16 @@ O Kali Linux é de suma importância para o projeto porque permite a realizaçã
 
 Para a instalação, acesse o site oficial do Kali Linux [aqui](https://www.kali.org/get-kali/#kali-platforms)
 
-Escolha o download do Kali para o VirtualBox conforme a arquitetura
+Escolha o download do Kali para o **VirtualBox** conforme a arquitetura.
 
+![kali-linux](/screenshots/kali-linux.png)
+
+Após o download, haverá um arquivo compactado que precisará ser extraído. Escolha qualquer local para extrair.
+
+Se não puder extrair, instale o WinRar [aqui](https://www.win-rar.com/start.html?&L=9)
+
+Após isso, uma pasta com dois arquivos é extraída. Clique duas vezes no arquivo que se parece com uma caixa azul para abrir o arquivo no VirtualBox(Certifique-se de já ter instalado o VirtualBox).
+
+A tela será algo parecido com isso, clique em iniciar e aguarde a inicialização.
+
+Após aparecer a tela de início, faça o login com o usuário **kali** e senha **kali** e pronto. 
