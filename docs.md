@@ -51,4 +51,6 @@ Após isso, uma pasta com dois arquivos é extraída. Clique duas vezes no arqui
 
 A tela será algo parecido com isso, clique em iniciar e aguarde a inicialização.
 
-Após aparecer a tela de início, faça o login com o usuário **kali** e senha **kali** e pronto. 
+![kalinoVB](/screenshots/kalinoVB.png)
+
+Após aparecer a tela de início, faça o login com o usuário **kali** e senha **kali**.
