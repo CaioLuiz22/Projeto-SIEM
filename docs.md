@@ -37,7 +37,7 @@ Características Principais do Kali Linux:
 
 O Kali Linux é de suma importância para o projeto porque permite a realização de testes de penetração e segurança de rede para estimular a geração de logs que será abordada mais a frente.
 
-Para a instalação, acesse o site oficial do Kali Linux [aqui](https://www.kali.org/get-kali/#kali-platforms)
+Para a instalação, acesse o site oficial do Kali Linux [aqui](https://www.kali.org/get-kali/#kali-platforms).
 
 Escolha o download do Kali para o **VirtualBox** conforme a arquitetura.
 
@@ -45,12 +45,33 @@ Escolha o download do Kali para o **VirtualBox** conforme a arquitetura.
 
 Após o download, haverá um arquivo compactado que precisará ser extraído. Escolha qualquer local para extrair.
 
-Se não puder extrair, instale o WinRar [aqui](https://www.win-rar.com/start.html?&L=9)
+Se não puder extrair, instale o WinRar [aqui](https://www.win-rar.com/start.html?&L=9).
 
-Após isso, uma pasta com dois arquivos é extraída. Clique duas vezes no arquivo que se parece com uma caixa azul para abrir o arquivo no VirtualBox(Certifique-se de já ter instalado o VirtualBox).
+Após isso, uma pasta com dois arquivos é extraída. Clique duas vezes no arquivo que se parece com uma caixa azul para abrir o arquivo no VirtualBox(certifique-se de já ter instalado o VirtualBox).
 
 A tela será algo parecido com isso, clique em iniciar e aguarde a inicialização.
 
 ![kalinoVB](/screenshots/kalinoVB.png)
 
 Após aparecer a tela de início, faça o login com o usuário **kali** e senha **kali**.
+
+### Ubuntu
+
+O Ubuntu é uma distribuição Linux popular, conhecida por ser amigável ao usuário e amplamente utilizada para desktops, servidores e até dispositivos IoT. Ele é baseado no Debian e é mantido pela empresa britânica Canonical, que oferece suporte e atualizações de segurança regulares para a plataforma.
+
+Características do Ubuntu
+
+- Fácil de Usar:
+    - O Ubuntu foi projetado para ser intuitivo e acessível para iniciantes em Linux, com uma interface gráfica amigável (chamada GNOME no Ubuntu padrão).
+    - É bem documentado, e a comunidade de usuários é muito ativa, facilitando a resolução de dúvidas e problemas.
+
+- Lançamentos Regulares:
+    - LTS (Long Term Support): As versões LTS, lançadas a cada dois anos, recebem suporte e atualizações por cinco anos, tornando-as ideais para uso em servidores e ambientes de produção.
+    - Intermediárias: Versões intermediárias são lançadas a cada seis meses, com suporte de nove meses, e geralmente trazem novos recursos e melhorias.
+
+- Segurança e Suporte de Longo Prazo:
+    - A Canonical fornece suporte e atualizações de segurança para o Ubuntu, e as versões LTS são uma escolha comum para servidores pela estabilidade e durabilidade.
+
+Para a instalação, acesse o site oficial do Ubuntu [aqui](https://ubuntu.com/download/desktop).
+
+Escolha a versão LTS para ter o SO mais atual.
