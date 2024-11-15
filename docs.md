@@ -82,7 +82,7 @@ Dê um nome à VM.
 
 No campo que pede a imagem a ser utilizada, escolha o caminho para a ISO do Ubuntu e marque a opção **Pular Instalação Desassistida**.
 
-Abra a aba do Hardware e coloque estas configurações, para ter 2 CPUs e 4 GB de RAM
+Abra a aba do Hardware e coloque estas configurações, para ter 2 CPUs e 4 GB de RAM. Após isso clique em finalizar.
 
 ![ubuntunovb](/screenshots/ubuntunovb.png)
 
@@ -112,6 +112,10 @@ Para a instalação, acesse o site SourceForge [aqui](https://sourceforge.net/pr
 
 Depois de feito o download, extraia o arquivo zip para gerar a pasta do metasploitable.
 
-Abra o VirtualBox e clique em **Novo**. Siga a imagem abaixo, com foco em **escolher o caminho com a pasta certa que foi extraida**, colocando um nome, escolhendo o tipo **Linux**, e o Subtipo **Outro Linux**.
+Abra o VirtualBox e clique em **Novo**. Siga a imagem abaixo, com foco em **escolher o caminho com a pasta certa que foi extraida**, colocando um nome, escolhendo o tipo **Linux**, e o Subtipo **Outro Linux**. Não há necessidade de alterar o Hardware. **Não finalize ainda**. O metasploitable não utiliza imagem porque o arquivo já vem com a máquina virtual já configurada(indicado pelo arquivo **.vmdk**) que será colocada na aba Disco Rígido.
 
-![metasplnovb]()
+![metasplnovb](/screenshots/metasplnovb.png)
+
+Abra a aba Disco Rígido e clique na opção **Utilizar um disco rígido virtual existente**. Clique no ícone de pasta ao lado e depois em **Acrescentar**. Vá até a pasta do metasploitable e selecione o arquivo .vmdk que é simbolizado por um ícone de caixa azul. Clique em finalizar.
+
+![metasplnovb2]()
