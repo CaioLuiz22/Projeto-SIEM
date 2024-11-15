@@ -75,3 +75,15 @@ Características do Ubuntu
 Para a instalação, acesse o site oficial do Ubuntu [aqui](https://ubuntu.com/download/desktop).
 
 Escolha a versão LTS para ter o SO mais atual.
+
+Ao obter a ISO do Ubuntu, abra o VirtualBox e clique em **Novo**.
+
+No campo que pede a imagem a ser utilizada, escolha o caminho para a ISO do Ubuntu e marque a opção **Pular Instalação Desassistida**.
+
+Abra a aba do Hardware e coloque estas configurações, para ter 2 CPUs e 4 GB de RAM
+
+![ubuntunovb](/screenshots/ubuntunovb.png)
+
+Após isso, abra a VM do Ubuntu.
+
+Haverá uma pequena inicialização em que será necessário criar uma conta com nome e senha. Crie do jeito que achar melhor.
