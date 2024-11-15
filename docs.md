@@ -116,6 +116,6 @@ Abra o VirtualBox e clique em **Novo**. Siga a imagem abaixo, com foco em **esco
 
 ![metasplnovb](/screenshots/metasplnovb.png)
 
-Abra a aba Disco Rígido e clique na opção **Utilizar um disco rígido virtual existente**. Clique no ícone de pasta ao lado e depois em **Acrescentar**. Vá até a pasta do metasploitable e selecione o arquivo .vmdk que é simbolizado por um ícone de caixa azul. Clique em finalizar.
+Abra a aba Disco Rígido e clique na opção **Utilizar um disco rígido virtual existente**. Clique no ícone de pasta ao lado e depois em **Acrescentar**. Vá até a pasta do metasploitable e selecione o arquivo .vmdk que é simbolizado por um ícone de caixa azul. Após acrescentar, clique no disco e depois embaixo da janela em **Escolher**. Clique em finalizar.
 
-![metasplnovb2]()
+![metasplnovb2](/screenshots/metasplnovb2.png)
