@@ -78,12 +78,40 @@ Escolha a versão LTS para ter o SO mais atual.
 
 Ao obter a ISO do Ubuntu, abra o VirtualBox e clique em **Novo**.
 
+Dê um nome à VM.
+
 No campo que pede a imagem a ser utilizada, escolha o caminho para a ISO do Ubuntu e marque a opção **Pular Instalação Desassistida**.
 
 Abra a aba do Hardware e coloque estas configurações, para ter 2 CPUs e 4 GB de RAM
 
 ![ubuntunovb](/screenshots/ubuntunovb.png)
 
-Após isso, abra a VM do Ubuntu.
+Após isso, inicialize a VM do Ubuntu.
 
 Haverá uma pequena inicialização em que será necessário criar uma conta com nome e senha. Crie do jeito que achar melhor.
+
+### Metasploitable
+
+O Metasploitable é uma máquina virtual vulnerável projetada para fins educacionais e de teste. Ele é usado principalmente por profissionais de segurança, estudantes e entusiastas para aprender e praticar testes de penetração e outras atividades relacionadas à segurança cibernética.
+
+Características do Metasploitable
+
+- Ambiente Seguro para Testes:
+    - Ele é intencionalmente configurado com várias vulnerabilidades conhecidas em sistemas, serviços e softwares, oferecendo um ambiente seguro e controlado para prática.
+
+- Variedade de Vulnerabilidades:
+    - Inclui vulnerabilidades em serviços como FTP, SSH, HTTP, bancos de dados, e até sistemas operacionais.
+    - Exemplos incluem credenciais padrão, injeção de SQL, vulnerabilidades no PHP, backdoors, entre outros.
+
+- Compatível com Ferramentas de Segurança:
+    - Foi projetado para ser explorado usando ferramentas como o Metasploit Framework, Nmap, Nikto, e outros.
+
+**Importante**: O Metasploitable deve nunca ser conectado a uma rede pública ou exposto à internet. Ele foi projetado para ser usado exclusivamente em ambientes fechados, como laboratórios locais ou redes virtuais (homelabs). Sempre execute-o em um ambiente isolado, como em sua máquina virtual no VirtualBox, para evitar que suas vulnerabilidades sejam exploradas acidentalmente.
+
+Para a instalação, acesse o site SourceForge [aqui](https://sourceforge.net/projects/metasploitable/files/Metasploitable2/) e clique em **metasploitable-linux-2.0.0.zip**. Após isso, aguarde aparecer o botão de download e clique nele.
+
+Depois de feito o download, extraia o arquivo zip para gerar a pasta do metasploitable.
+
+Abra o VirtualBox e clique em **Novo**. Siga a imagem abaixo, com foco em **escolher o caminho com a pasta certa que foi extraida**, colocando um nome, escolhendo o tipo **Linux**, e o Subtipo **Outro Linux**.
+
+![metasplnovb]()
