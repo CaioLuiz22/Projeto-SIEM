@@ -119,3 +119,63 @@ Abra o VirtualBox e clique em **Novo**. Siga a imagem abaixo, com foco em **esco
 Abra a aba Disco Rígido e clique na opção **Utilizar um disco rígido virtual existente**. Clique no ícone de pasta ao lado e depois em **Acrescentar**. Vá até a pasta do metasploitable e selecione o arquivo .vmdk que é simbolizado por um ícone de caixa azul. Após acrescentar, clique no disco e depois embaixo da janela em **Escolher**. Clique em finalizar.
 
 ![metasplnovb2](/screenshots/metasplnovb2.png)
+
+Inicie o Metasploitable.
+
+Ao iniciá-lo, ele pedirá o login e senha. Os dois são o mesmo: **msfadmin**.
+
+Tome cuidado ao clicar com o mouse. O metasploitable não foi feito para ter uma interface gráfica, então, ao receber a informação de clique do mouse, o mouse irá sumir e não poderá ser usado. Para voltar o controle do mouse, aperte a tecla configurada como host(Host-Key) normalmente CTRL-direito ou ALT-direito. Caso contrário, terá de reiniciar sua máquina.
+
+### Configuração da Rede
+
+**Certifique-se de que o Kali, Ubuntu e Metasploitable estejam desligados.**
+
+Para que o Metasploitable e o Kali-Linux se comuniquem, é necessário que ambos estejam em uma mesma rede. Para isso, iremos criar uma rede própria e configurar ambas as VMs para ela.
+
+No VirtualBox, clique nas três linhas horizontais em **Ferramentas** e selecione **Rede**.
+
+![rede1](/screenshots/rede1.png)
+
+Depois, vá até a aba **Redes NAT**.
+
+![rede2](/screenshots/rede2.png)
+
+NAT (Network Address Translation) é uma técnica usada em redes de computadores para modificar os endereços IP de pacotes enquanto eles passam por um roteador ou dispositivo semelhante.
+
+O NAT permite que vários dispositivos em uma rede privada compartilhem um único endereço IP público para acessar a Internet. O roteador realiza a tradução entre os endereços IP privados e o endereço IP público atribuído a ele.
+Exemplo:
+- Rede Interna (Privada):
+    - Dispositivos têm endereços como 192.168.0.x.
+- Rede Externa (Pública):
+    - O roteador possui um único IP público, como 203.0.113.1.
+
+Quando um dispositivo na rede interna acessa a Internet, o roteador:
+- Substitui o endereço IP privado pelo IP público no pacote.
+- Mantém uma tabela para saber qual dispositivo interno corresponde a cada conexão.
+
+Ao receber uma resposta, o roteador traduz o IP de volta para o endereço interno apropriado.
+
+No nome coloque **Externa** para sinalizar que essa é nossa rede externa e troque o IP no campo abaixo para **192.168.50.0/24**. Certifique-se de que este IP não seja o mesmo da sua máquina real para que não haja conflito.
+
+Quando um IP de rede possui /24 no final ou possui máscara de rede 255.255.255.0, dizemos que a rede pode ter até 254 hosts. Isso decorre do fato do IP reservar 32 bits para o endereço e, quando indicamos o /24, é o mesmo que sinalizar que 24 bits são para a rede e 8 bits para o host. Assim, achamos o número 8, que ao elevarmos 2 por 8 chegamos em 256 hosts.
+Por fim, o padrão é reservar o host 0 para identificar a rede e o host 255 para se comunicar com os dispositivos da rede(nesse caso, 192.168.50.0 e 192.168.50.255 respectivamente). Assim chegamos em 254 hosts possíveis.
+
+![rede3](/screenshots/rede3.png)
+
+Certifique-se de que o **DHCP** está habilitado.
+
+O DHCP (Dynamic Host Configuration Protocol) é um protocolo de rede que automatiza a configuração de dispositivos em uma rede, permitindo que eles obtenham informações essenciais, como:
+
+- Endereço IP: O endereço único que identifica o dispositivo na rede.
+- Máscara de Sub-rede: Define quais partes do endereço IP pertencem à rede e quais identificam o host.
+- Gateway Padrão: O endereço do roteador que permite a comunicação com outras redes.
+- Servidores DNS: Para traduzir nomes de domínio (como example.com) em endereços IP.
+
+O processo básico do DHCP ocorre em quatro etapas principais, conhecidas como DORA:
+- Discover (Descoberta): O dispositivo cliente envia um broadcast solicitando um endereço IP na rede.
+- Offer (Oferta): O servidor DHCP responde com uma oferta de configuração de rede.
+- Request (Solicitação): O cliente aceita a oferta enviando uma solicitação para confirmar o uso das configurações.
+- Acknowledge (Reconhecimento): O servidor confirma e fornece os dados ao cliente.
+
+A maior vantagem do protocolo DHCP é a automatização de configuração de IPs, senão, seria necessário configurar cada um dos 254 IPs, ou seja, atribuir manualmente um endereço IP para cada dispositivo na rede.
+
