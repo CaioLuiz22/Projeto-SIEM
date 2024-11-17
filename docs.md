@@ -136,7 +136,7 @@ No VirtualBox, clique nas três linhas horizontais em **Ferramentas** e selecion
 
 ![rede1](/screenshots/rede1.png)
 
-Depois, vá até a aba **Redes NAT**.
+Depois, vá até a aba **Redes NAT** e clique em **criar**.
 
 ![rede2](/screenshots/rede2.png)
 
@@ -179,3 +179,42 @@ O processo básico do DHCP ocorre em quatro etapas principais, conhecidas como D
 
 A maior vantagem do protocolo DHCP é a automatização de configuração de IPs, senão, seria necessário configurar cada um dos 254 IPs, ou seja, atribuir manualmente um endereço IP para cada dispositivo na rede.
 
+Clique em **Aplicar** no canto inferior direito.
+
+Agora é só configurar o Kali e o Metasploitable na rede recém-criada(Ubuntu será configurado depois).
+
+Clique no Kali, depois em **Configurações**(engrenagem no topo) e em seguida na aba **Rede**. No campo "**Conectado a**" escolha **Rede NAT** e no campo nome **Externa**. Finalize com **Ok**. Faça o mesmo para o Metasploitable.
+
+![kalinarede](/screenshots/kalinarede.png)
+
+Vamos verificar se há conexão entre elas. Abra as duas VMs, Kali e Metasploitable e deixe em tela dividida para uma melhor visualização como na imagem abaixo.
+
+![visualtela](/screenshots/visualtela.png)
+
+No Kali, inicie um terminal clicando no ícone de terminal preto no canto superior direito e coloque o comando a seguir para ver o IP do Kali:
+
+```bash
+$ ip a
+```
+O IP aparecerá no campo **eth0** em **inet** como 192.168.50.x
+
+Já no Metasploitable, coloque o comando abaixo:
+
+```bash
+$ ifconfig
+```
+
+Igual no Kali em **eth0**, mas em **inet addr** como 192.168.50.x 
+
+Agora teste a conexão utilizando o comando **ping** em ambas as máquinas e veja se ocorre uma sequência de linhas demonstrando conexão.
+
+O comando ping utiliza o protocolo ICMP (Internet Control Message Protocol) para testar a conectividade de rede entre dispositivos.
+
+O ping envia pacotes ICMP Echo Request para o host de destino e aguarda a resposta com pacotes ICMP Echo Reply. O processo é basicamente:
+- O comando ping envia um pacote ICMP Echo Request (não um pacote SYN, como no TCP).
+- O host de destino, se estiver acessível e não bloquear ICMP, responde com um pacote ICMP Echo Reply.
+- O tempo entre o envio e o recebimento da resposta é medido, fornecendo informações sobre o tempo de latência.
+
+```bash
+$ ping <IP Alvo>
+```
