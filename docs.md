@@ -187,11 +187,11 @@ Clique no Kali, depois em **Configurações**(engrenagem no topo) e em seguida n
 
 ![kalinarede](/screenshots/kalinarede.png)
 
-Vamos verificar se há conexão entre elas. Abra as duas VMs, Kali e Metasploitable e deixe em tela dividida para uma melhor visualização como na imagem abaixo.
+Vamos verificar se há conexão entre elas. Abra as duas VMs, Kali e Metasploitable, e deixe em tela dividida para uma melhor visualização como na imagem abaixo.
 
 ![visualtela](/screenshots/visualtela.png)
 
-No Kali, inicie um terminal clicando no ícone de terminal preto no canto superior direito e coloque o comando a seguir para ver o IP do Kali:
+No Kali, inicie um terminal clicando no ícone de terminal preto no canto superior esquerdo e coloque o comando a seguir para ver o IP do Kali:
 
 ```bash
 $ ip a
