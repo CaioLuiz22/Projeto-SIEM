@@ -229,3 +229,19 @@ Para ter uma máquina Windows no VirtualBox, é preciso ter uma imagem de disco 
 ISO ou imagem de disco é um arquivo(.iso) que contém uma cópia exata dos dados de um disco, como um CD, DVD ou Blu-ray. É frequentemente usado para distribuir sistemas operacionais, programas ou jogos em formato digital.
 
 Para baixar a iso do windows 10 que irá ser utilizado no projeto, é preciso montar a imagem de disco com um programa que está no site oficial da microsoft e pode ser acessado [aqui](https://www.microsoft.com/pt-br/software-download/windows10)
+**Note que para o funcionamento do projeto, não é necessária mais que uma VM do Windows. Irei utilizar mais que uma para obter mais logs que o normal, simulando uma rede de computadores mais ampla(um servidor ubuntu, metasploitable e dois windows).**
+
+![instalarwind](/screenshots/instalarwind.png)
+
+Com isso, abra o software de instalação do windows e escolha a opção **criar mídia de instalação**
+
+![iso1](/screenshots/iso1.png)
+
+Depois, clique em avançar para manter o windows com as configurações padrão e selecione a opção **arquivo ISO**
+
+![iso2](/screenshots/iso2.png)
+
+Salve em alguma pasta o arquivo e abra o VirtualBox.
+
+Clique em **Novo**, dê um nome para a VM(no meu caso, WKS01), selecione a pasta para manter a VM, selecione o arquivo iso que acabou de ser instalado e, por fim, confirme a opção **Pular Instalação Desassistida**
+Na área de hardware, coloque 4GB de RAM(4096MB) e duas CPUs. Deixe a aba **Disco Rígido** como está.
