@@ -90,6 +90,8 @@ Após isso, inicialize a VM do Ubuntu.
 
 Haverá uma pequena inicialização em que será necessário criar uma conta com nome e senha. Crie do jeito que achar melhor.
 
+É importante notar que na inicialização, é preciso escolher instalar o Ubuntu e, na criação da conta, fazer a instalação manual.
+
 ### Metasploitable
 
 O Metasploitable é uma máquina virtual vulnerável projetada para fins educacionais e de teste. Ele é usado principalmente por profissionais de segurança, estudantes e entusiastas para aprender e praticar testes de penetração e outras atividades relacionadas à segurança cibernética.
@@ -218,3 +220,12 @@ O ping envia pacotes ICMP Echo Request para o host de destino e aguarda a respos
 ```bash
 $ ping <IP Alvo>
 ```
+
+### Windows
+
+O Windows é um sistema operacional desenvolvido pela Microsoft. É muito popular por possuir uma interface gráfica amigável, por ser versátil com diversos dispositivos como desktops, laptops, tablets e servidores e ser compatível com diversos softwares e hardwares.
+
+Para ter uma máquina Windows no VirtualBox, é preciso ter uma imagem de disco ou ISO(International Organization for Standardization).
+ISO ou imagem de disco é um arquivo(.iso) que contém uma cópia exata dos dados de um disco, como um CD, DVD ou Blu-ray. É frequentemente usado para distribuir sistemas operacionais, programas ou jogos em formato digital.
+
+Para baixar a iso do windows 10 que irá ser utilizado no projeto, é preciso montar a imagem de disco com um programa que está no site oficial da microsoft e pode ser acessado [aqui](https://www.microsoft.com/pt-br/software-download/windows10)
