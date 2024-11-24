@@ -246,8 +246,6 @@ Salve em alguma pasta o arquivo e abra o VirtualBox.
 Clique em **Novo**, dê um nome para a VM(no meu caso, WKS01), selecione a pasta para manter a VM, selecione o arquivo iso que acabou de ser instalado e, por fim, confirme a opção **Pular Instalação Desassistida**
 Na área de hardware, coloque 4GB de RAM(4096MB) e duas CPUs. Deixe a aba **Disco Rígido** como está.
 
-Como mencionado anteriormente, é de sua escolha ter apenas uma VM do Windows, duas ou mais. Se seguir o meu modelo de projeto, faça outra máquina Windows do mesmo jeito apenas alterando o nome(no meu caso, WKS02).
-
 Abra a VM do Windows, vai abrir a tela de configuração do instalador do Wnindows. Deixe como está e clique em **Avançar**.
 
 ![wind1](/screenshots/wind1.png)
@@ -267,5 +265,24 @@ Clique na opção **Configurar para uma organização** e depois em **Ingresso n
 ![wind4](/screenshots/wind4.png)
 ![wind5](/screenshots/wind5.png)
 
-Crie um nome de usuário e uma senha que se lembre fácil. Nas perguntas de segurança, coloque uma mesma palavra para as três perguntas.
+Crie um nome de usuário e uma senha que se lembre facilmente. Nas perguntas de segurança, coloque uma mesma palavra para as três perguntas.
+
 A partir daqui, irá ter diversas recomendações de configurações do windows. Ignore todas ou selecione **Não**
+
+Entre com a senha criada e troque o nome do computador para o nome da VM.
+
+Quando se tenta maximizar a janela da VM, a máquina não acompanha a borda. Por isso, é necessário inserir a imagem de cd como indicado na imagem abaixo.
+
+![imagemcd1](/screenshots/imagemcd1.png)
+
+Próximo ao diretório C, irá aparecer o ícone do VirtualBox. Clique nele e abra o arquivo indicado abaixo. Clique avançar sem mudar nada e depois instale. Ao final, clique em finalizar.
+
+![imagemcd2](screenshots/imagemcd2.png)
+
+**Como mencionado anteriormente, é de sua escolha ter apenas uma VM do Windows, duas ou mais. Se seguir o meu modelo de projeto, faça outra máquina Windows do mesmo jeito apenas alterando o nome(no meu caso, WKS02).**
+
+Por fim, iremos conectar a VM na rede que foi criada.
+
+Faça o mesmo processo que foi feito no Ubuntu, Kali e Metasploitable, clique na VM, **Configurações**, **Rede**, **Conectado a: Rede NAT** e **Nome: Externa**
+
+**Assim, foi finalizado a instalação de todas as VMs do nosso homelab.**
