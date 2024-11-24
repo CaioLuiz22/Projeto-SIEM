@@ -245,3 +245,18 @@ Salve em alguma pasta o arquivo e abra o VirtualBox.
 
 Clique em **Novo**, dê um nome para a VM(no meu caso, WKS01), selecione a pasta para manter a VM, selecione o arquivo iso que acabou de ser instalado e, por fim, confirme a opção **Pular Instalação Desassistida**
 Na área de hardware, coloque 4GB de RAM(4096MB) e duas CPUs. Deixe a aba **Disco Rígido** como está.
+
+Como mencionado anteriormente, é de sua escolha ter apenas uma VM do Windows, duas ou mais. Se seguir o meu modelo de projeto, faça outra máquina Windows do mesmo jeito apenas alterando o nome(no meu caso, WKS02).
+
+Abra a VM do Windows, vai abrir a tela de configuração do instalador do Wnindows. Deixe como está e clique em **Avançar**.
+
+![wind1](/screenshots/wind1.png)
+
+Não há chave do Windows, então clique na opção **Não tenho a chave do produto**.
+
+![wind2](/screenshots/wind2.png)
+
+Clique na opção **Personalizada** para o tipo de instalação e depois em **Avançar** já que há apenas uma partição para utilizar.
+
+![wind3](/screenshots/wind3.png)
+
