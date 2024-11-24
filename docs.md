@@ -260,3 +260,12 @@ Clique na opção **Personalizada** para o tipo de instalação e depois em **Av
 
 ![wind3](/screenshots/wind3.png)
 
+Deixe a instalação ocorrer até chegar na tela de escolher a região.
+Escolha a região e o layout de teclado(pule o segundo layout de teclado).
+Clique na opção **Configurar para uma organização** e depois em **Ingresso no domínio**.
+
+![wind4](/screenshots/wind4.png)
+![wind5](/screenshots/wind5.png)
+
+Crie um nome de usuário e uma senha que se lembre fácil. Nas perguntas de segurança, coloque uma mesma palavra para as três perguntas.
+A partir daqui, irá ter diversas recomendações de configurações do windows. Ignore todas ou selecione **Não**
