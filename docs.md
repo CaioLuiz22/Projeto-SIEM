@@ -286,3 +286,17 @@ Por fim, iremos conectar a VM na rede que foi criada.
 Faça o mesmo processo que foi feito no Ubuntu, Kali e Metasploitable, clique na VM, **Configurações**, **Rede**, **Conectado a: Rede NAT** e **Nome: Externa**
 
 **Assim, foi finalizado a instalação de todas as VMs do nosso homelab.**
+
+## Elastic Search
+
+O Elasticsearch é uma ferramenta essencial em uma arquitetura de SIEM, pois é usada como um motor de busca e análise de dados. Ele desempenha um papel crítico ao permitir que grandes volumes de dados de logs, eventos e métricas sejam armazenados, pesquisados e analisados de forma eficiente.
+
+Papel do Elasticsearch no SIEM
+
+- Armazenamento Centralizado:
+    - Todos os logs e eventos coletados de diferentes fontes, como firewalls, sistemas operacionais, aplicativos e dispositivos de rede, são enviados para o Elasticsearch. Ele é projetado para lidar com grandes volumes de dados em tempo real.
+- Indexação e Busca Rápida:
+    - O Elasticsearch indexa os dados para que possam ser consultados rapidamente. Em um SIEM, isso permite buscas rápidas por incidentes de segurança, padrões de comportamento suspeitos ou eventos específicos.
+- Análise e Correlação de Dados:
+    - Ele trabalha com ferramentas como o Logstash (coleta e processamento de dados) e o Kibana (visualização de dados) para identificar padrões e tendências nos eventos de segurança.
+
