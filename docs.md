@@ -287,7 +287,7 @@ Faça o mesmo processo que foi feito no Ubuntu, Kali e Metasploitable, clique na
 
 **Assim, foi finalizado a instalação de todas as VMs do nosso homelab.**
 
-## Elastic Search
+## Elasticsearch
 
 O Elasticsearch é uma ferramenta essencial em uma arquitetura de SIEM, pois é usada como um motor de busca e análise de dados. Ele desempenha um papel crítico ao permitir que grandes volumes de dados de logs, eventos e métricas sejam armazenados, pesquisados e analisados de forma eficiente.
 
@@ -300,3 +300,16 @@ Papel do Elasticsearch no SIEM
 - Análise e Correlação de Dados:
     - Ele trabalha com ferramentas como o Logstash (coleta e processamento de dados) e o Kibana (visualização de dados) para identificar padrões e tendências nos eventos de segurança.
 
+Para instalação, irei seguir o guia presente na documentação oficial do Elasticsearch com algumas alterações.
+
+Comece abrindo sua VM Ubuntu e abrindo um terminal clicando no símbolo do Ubuntu no canto inferior esquerdo e selecionando o ícone do terminal ou clicando com o botão direito e indo na opção **Open Terminal**.
+
+Precisamos fazer o download da chave pública para permitir que diversos clientes(máquinas que irão fornecer e interagir com os dados) consigam transportar informações de maneira segura.
+```bash
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+```
+
+Instale o pacote apt-transport-https que serve para o apt realizar downloads de repositórios via HTTPS
+```bash
+sudo apt-get install apt-transport-https
+```
