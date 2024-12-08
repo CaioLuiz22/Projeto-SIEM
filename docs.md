@@ -313,3 +313,55 @@ Instale o pacote apt-transport-https que serve para o apt realizar downloads de 
 ```bash
 sudo apt-get install apt-transport-https
 ```
+
+Salve a definição do repositório para  /etc/apt/sources.list.d/elastic-8.x.list:
+```bash
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+```
+
+Instale o pacote Debian do Elasticsearch:
+```bash
+sudo apt-get update && sudo apt-get install elasticsearch
+```
+
+Agora, configure o elasticsearch para inicializar automaticamente com o boot do sistema:
+```bash
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
+```
+
+O comando sudo /bin/systemctl daemon-reload é usado para recarregar os arquivos de configuração de todos os daemons do sistema sem reiniciar o computador. Ele é necessário em casos como a instalação de novos serviços ou quando há alterações em arquivos de unidade de serviços (como os arquivos .service).
+
+Um daemon (pronuncia-se "dêmon") é um tipo especial de programa no Linux (e outros sistemas baseados em Unix) que roda em segundo plano, geralmente para executar tarefas específicas ou atender a solicitações de serviços. Exemplos comuns de daemons incluem:
+
+- sshd: Gerencia conexões SSH.
+- httpd ou nginx: Servidores web.
+- elasticsearch.service: Nesse caso, é o serviço do Elasticsearch.
+
+Os daemons são frequentemente iniciados automaticamente durante a inicialização do sistema e continuam rodando enquanto o sistema está em operação.
+O `systemctl daemon-reload` força o systemd (o gerenciador de serviços do sistema) a reanalisar todos os arquivos de configuração de serviços e outros daemons. Isso é útil quando você:
+
+- Instala um novo serviço, como o Elasticsearch.
+- Altera um arquivo .service em /etc/systemd/system/ ou /usr/lib/systemd/system/.
+
+Sem executar daemon-reload, o systemd pode não "ver" ou aplicar mudanças recentes nos arquivos de configuração dos serviços.
+
+Comece o elasticsearch:
+```bash
+sudo systemctl start elasticsearch.service
+```
+
+Você pode ligar e desligar com esses comandos, primeiro ligue:
+```bash
+sudo systemctl start elasticsearch.service
+sudo systemctl stop elasticsearch.service
+```
+
+Após isso, verifique se o status é o mesmo da imagem(active):
+```bash
+sudo systemctl status elasticsearch.service
+```
+[elasticativo](/screenshots/elasticativo.png)
+
+Para verificar se tem como conectar-se ao Elasticsearch, vá ao navegador(firefox no ubuntu) e digite: http://localhost:9200
+Ele irá pedir um usuário e senha porque está especificado nas configurações do elasticsearch que a segurança da conexão fique sempre ativa. Por isso iremos desativá-la.
