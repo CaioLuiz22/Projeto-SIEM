@@ -361,7 +361,55 @@ Após isso, verifique se o status é o mesmo da imagem(active):
 ```bash
 sudo systemctl status elasticsearch.service
 ```
-[elasticativo](/screenshots/elasticativo.png)
+![elasticativo](/screenshots/elasticativo.png)
 
-Para verificar se tem como conectar-se ao Elasticsearch, vá ao navegador(firefox no ubuntu) e digite: http://localhost:9200
+Para verificar se tem como conectar-se ao Elasticsearch, vá ao navegador(firefox no ubuntu) e digite: `http://localhost:9200`(ele conecta-se sempre na porta 9200 se não for alterada).
+
 Ele irá pedir um usuário e senha porque está especificado nas configurações do elasticsearch que a segurança da conexão fique sempre ativa. Por isso iremos desativá-la.
+
+Abra um terminal digite isso para ir ao diretório etc:
+```bash
+cd /etc
+```
+Ao entrar, se você digitar `ls` verá diversos arquivos.
+
+O diretório `/etc` em sistemas Linux (e outros sistemas Unix-like) é onde ficam armazenados os arquivos de configuração do sistema e dos programas instalados. Ele desempenha um papel central na personalização e no controle do funcionamento do sistema.
+Características do /etc
+
+- Arquivos de Configuração:
+    - Contém arquivos de configuração que controlam como os serviços, aplicações e o próprio sistema operacional funcionam.
+    - Geralmente, esses arquivos são em texto simples, o que facilita edição manual.
+
+- Somente Leitura para Usuários Normais:
+    - Normalmente, apenas o usuário root (ou usuários com permissões elevadas) pode modificar os arquivos nesse diretório. Usuários comuns podem apenas lê-los.
+
+- Estrutura do /etc:
+    - Dentro do /etc, há arquivos individuais e subdiretórios para configurar diferentes aspectos do sistema. Exemplos incluem:
+        - Arquivos individuais:
+            - `/etc/passwd`: Lista os usuários do sistema.
+            - `/etc/fstab`: Define como os sistemas de arquivos devem ser montados.
+            - `/etc/hostname`: Nome do computador.
+        - Subdiretórios:
+            - `/etc/systemd/`: Configurações do systemd, como arquivos de serviços.
+            - `/etc/network/`: Configurações de rede.
+            - `/etc/nginx/`: Configuração do servidor web Nginx.
+
+- Configurações Padrão vs. Personalizadas:
+    - As configurações padrão geralmente são instaladas junto com os pacotes de software.
+    - Alterações feitas em /etc permitem personalizar o comportamento do software sem modificar os binários originais.
+
+Originalmente, o nome significava "et cetera", sugerindo que ele conteria "outros arquivos que não se encaixavam em outro lugar". No entanto, hoje ele tem um papel bem definido como o diretório de configuração.
+
+O arquivo que procuramos é o `elasticsearch.yml` que está no diretório `/elasticsearch`
+
+Um arquivo .yml (ou .yaml, ambos os nomes são equivalentes) é um arquivo no formato YAML (YAML Ain't Markup Language). O YAML é uma linguagem de serialização de dados amplamente usada para configurar aplicações devido à sua simplicidade e legibilidade. Sua estrutura baseia-se em pares de chave e valor, assim como a estrutura dos dicionários na programação.
+
+Se você tentar digitar `cd elasticsearch`, será bloqueado por não haver permissão. Isso ocorre porque, como foi mencionado anteriormente, apenas o usuário root pode modificar arquivos. Para isso, é necessário desbloquear o acesso ao diretório e ao arquivo depois.
+
+```bash
+sudo chmod 777 elasticsearch
+```
+
+Esse comando serve para alterar as permissões de um arquivo ou diretório. O `sudo` serve para elevar as permissões do comando para root ao exigir a senha de usuário root, `chmod` modifica as permissões de Ler(read `r`), Escrever(write `w`) e Executar(execute `x`) e `777` representa as permissões em notação octal, 4=Ler(`r`) + 2=Escrever(`w`) + 1=Executar(`x`), três 7 siginfica que o dono, o grupo e outros podem ler, escrever e executar neste diretório ou arquivo.
+
+**Só use este comando em ambiente controlado(teste) ou situações temporárias.**
