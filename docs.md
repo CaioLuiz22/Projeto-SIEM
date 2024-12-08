@@ -412,4 +412,30 @@ sudo chmod 777 elasticsearch
 
 Esse comando serve para alterar as permissões de um arquivo ou diretório. O `sudo` serve para elevar as permissões do comando para root ao exigir a senha de usuário root, `chmod` modifica as permissões de Ler(read `r`), Escrever(write `w`) e Executar(execute `x`) e `777` representa as permissões em notação octal, 4=Ler(`r`) + 2=Escrever(`w`) + 1=Executar(`x`), três 7 siginfica que o dono, o grupo e outros podem ler, escrever e executar neste diretório ou arquivo.
 
-**Só use este comando em ambiente controlado(teste) ou situações temporárias.**
+**Só use este comando em um ambiente controlado(teste) ou situações temporárias.**
+
+Continuando, entre no diretório elasticsearch:
+```bash
+cd elasticsearch
+```
+
+Ao digitar `ls`, verá que há um arquivo elasticsearch.yml. Digite esse comando para editá-lo:
+```bash
+sudo nano elasticsearch.yml
+```
+
+Ao abrir o arquivo, vá até a seção `BEGIN SECURITY AUTO CONFIGURATION` e coloque as duas opções em `Enable security features` como `false`.
+
+![elasticsec](/screenshots/elasticsec.png)
+
+Pressione `CTRL + S` para salvar e `CTRL + X` para fechar a edição.
+
+Agora é necessário reiniciar o elasticsearch, por isso usamos o mesmo código para inicializar mas com a instrução `restart`:
+```bash
+sudo systemctl restart elasticsearch.service
+```
+
+Volte ao navegador e digite novamente `http://localhost:9200`, se aparecer algo como isso, funcionou.
+
+![elasticfunc](/screenshots/elasticfunc.png)
+
